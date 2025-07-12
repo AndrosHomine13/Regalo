@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Una Noticia Muy Especial</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Pantalla de Bienvenida -->
+  <div class="container" id="pantalla-inicial">
+    <h1>Hola Jose y Stella 👋</h1>
+    <p>Bonjour José et Stella 💌 <br><small>(Hola en francés)</small></p>
+    <p>Tenemos un pequeño juego para ustedes 🧩</p>
+    <button onclick="iniciarJuego()">Comenzar</button>
+  </div>
+
+  <!-- Juego de Pistas -->
+  <div class="container oculto" id="preguntas">
+    <h2>¿Qué llega en 9 meses pero no es un paquete de Amazon?</h2>
+    <ul>
+      <li onclick="responder(false)">Un viaje programado</li>
+      <li onclick="responder(true)">Un bebé hermoso</li>
+      <li onclick="responder(false)">Un curso de cocina</li>
+    </ul>
+    <p style="margin-top: 1rem;">C’est petit, mais ça va changer nos vies...<br>
+    <small>(Es pequeño, pero va a cambiar nuestras vidas…)</small></p>
+  </div>
+
+  <!-- Pantalla de Revelación -->
+  <div class="container oculto" id="revelacion">
+    <h1>🎉 ¡Van a ser abuelos! 🎉</h1>
+    <p>Vous allez être grands-parents !</p>
+    <!-- Imagen de la prueba de embarazo -->
+  <img src="prueba-embarazo.jpg" alt="Prueba de embarazo" style="max-width: 70%; border-radius: 12px; margin: 0.5rem 0;" />
+    <p>Gracias por siempre estar con nosotros.<br>
+    No podíamos esperar para compartir esta alegría con ustedes.</p>
+    <button onclick="mostrarFoto()">Clic para ver más</button>
+
+      <!-- Imagen de ustedes dos (inicialmente oculta) -->
+    <div id="foto-nosotros" style="display: none; margin-top: 1rem;">
+        <img src="nosotros-con-prueba.jpg" alt="Nosotros con la prueba" style="max-width: 100%; border-radius: 12px;" />
+        <p style="font-size: 1.2em">Avec tout notre amour ❤️<br><small>(Con todo nuestro amor)</small><br>Luisa y Cristhian</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>

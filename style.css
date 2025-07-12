@@ -1,0 +1,112 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom right, #fdf6f0, #fde8e8);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  transition: all 0.4s ease;
+}
+
+h1, h2 {
+  color: #ff6b81;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+small {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+button {
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4e68;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #ffeaea;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+li:hover {
+  background-color: #ffc9c9;
+}
+
+.oculto {
+  display: none;
+}
+
+.corazon {
+  position: fixed;
+  bottom: 0;
+  font-size: 2rem;
+  animation: flotar 6s linear infinite;
+  z-index: 999;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Detalles visuales */
+@media (max-width: 500px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1.2rem;
+  }
+
+  h1, h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
