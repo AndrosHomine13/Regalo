@@ -81,6 +81,17 @@ li:hover {
   z-index: 999;
 }
 
+.marca-agua {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  pointer-events: none;
+  user-select: none;
+}
+
 @keyframes flotar {
   0% {
     transform: translateY(0) scale(1);
@@ -109,4 +120,5 @@ li:hover {
   p {
     font-size: 1rem;
   }
+
 }
